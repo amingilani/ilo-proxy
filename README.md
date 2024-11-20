@@ -25,7 +25,7 @@ This proxy:
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/ilo2-proxy
+git clone https://github.com/amingilani/ilo2-proxy
 cd ilo2-proxy
 ```
 
@@ -37,8 +37,8 @@ docker build -t ilo2-proxy .
 3. Run the proxy (replace with your ILO 2's IP address):
 ```bash
 docker run -d \
-  -p 80:80 \
-  -p 443:443 \
+  -p 80:8080 \
+  -p 443:4343 \
   -e REMOTE_IP=192.168.1.20 \
   --name ilo2-proxy \
   ilo2-proxy
@@ -61,8 +61,8 @@ To use your own SSL certificates instead of the self-signed ones:
 
 ```bash
 docker run -d \
-  -p 80:80 \
-  -p 443:443 \
+  -p 80:8080
+  -p 443:4343\
   -e REMOTE_IP=192.168.1.20 \
   -v /path/to/your/cert.crt:/etc/nginx/ssl/proxy.crt \
   -v /path/to/your/key.key:/etc/nginx/ssl/proxy.key \
