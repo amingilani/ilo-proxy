@@ -1,5 +1,8 @@
 # ILO2 Legacy TLS Proxy
 
+THIS DOES NOT WORK! OPENSSL NEEDS TO BE CONFIGURED TO USE THE OUTDATED CIPHER SUITES.
+
+
 This project provides a Docker-based reverse proxy solution for accessing HP ILO 2 management interfaces from modern browsers. It addresses the issue where modern browsers block access to ILO 2 due to its outdated TLS 1.0 implementation.
 
 ## Problem
